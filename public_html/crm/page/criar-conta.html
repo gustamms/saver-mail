@@ -1,0 +1,43 @@
+<link rel="stylesheet" type="text/css" href="{PATH}/css/login-usuario.css">
+<div class="ui grid" style="margin-left: 0px !important;">
+	<div class="seven wide column" name="formUsuario">
+		<div class="ui segment">
+			<form class="ui big form" @submit="checkForm" method="post" id="formCriarConta">
+				<center>
+					<img class="ui small image" src="{PATH}/images/savermail.png">
+				</center>
+				<div class="field">
+					<label>Digite seu nome</label>
+					<div class="ui input">
+						<input type="text" name="nome" placeholder="Nome" v-model="nome">
+					</div>
+				</div>
+				<div class="field">
+					<label>Digite seu e-mail</label>
+					<div class="ui input">
+						<input type="email" name="email" placeholder="E-mail" v-model="email">
+					</div>
+				</div>
+				<div class="field">
+					<label>Digite uma senha</label>
+					<div class="ui input">
+						<input type="password" name="senha" placeholder="Senha" v-model="senha">
+					</div>
+				</div>
+				<div type="submit" class="ui primary big fluid button" name="submit" v-on:click="checkForm">Enviar</div>
+				<div class="ui primary big fluid loading button" style="display: none;">Loading...</div>
+				<h5 class="ui right aligned header">
+					<a href="login">Já tenho conta</a>
+				</h5>
+			</form>
+		</div>
+	</div>
+	<div class="nine wide column" name="info">
+		<div class="ui segment">
+			<h4 class="ui header">
+        Comece a impactar seus clientes hoje mesmo, crie e gerencie suas campanhas de e-mail de forma rápida e fácil, conheça melhor o seu público e performe mais!
+    	</h4>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="{PATH}/js/cadastrar-usuario.js"></script>

@@ -1,0 +1,8 @@
+.ui.grid{
+	margin: 0;
+	margin-left: 50px;
+}
+
+header i.icon[name=sair]{
+	margin-top: 15px;
+}

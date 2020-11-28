@@ -1,0 +1,22 @@
+<div id="header"></div>
+<div class="ui grid">
+	<div class="ui eight wide centered column">
+		<h2 class="ui dividing header">Cadastrar novo contato</h2>
+		<div class="content"></div>
+		<form class="ui big form" method="post" @submit="checkForm" id="cadastrarContato">
+			<div class="field required">
+				<label>Nome</label>
+				<input type="text" v-model="contato.nome">
+			</div>
+			<div class="field required">
+				<label>E-mail</label>
+				<input type="text" v-model="contato.email">
+			</div>
+			<button class="ui big primary button">Salvar</button>
+			<button class="ui big loading button" style="display: none;">Loading...</button>
+		</form>
+	</div>	
+</div>
+
+<script type="text/javascript" src="{PATH}/js/header.js"></script>
+<script type="text/javascript" src="{PATH}/js/cadastrar-contato.js"></script>

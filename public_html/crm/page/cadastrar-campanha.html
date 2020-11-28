@@ -1,0 +1,39 @@
+<div id="header"></div>
+<div class="ui grid">
+	<div class="ui eight wide centered column">
+		<h2 class="ui dividing header">Cadastrar nova campanha</h2>
+		<div class="content"></div>
+		<form class="ui big form" method="post" @submit="checkForm" id="cadastrarCampanha">
+			<div class="field">
+				<label>Assunto</label>
+				<input type="text" name="descricao" v-model="descricao">
+			</div>
+			<div class="field">
+				<label>Corpo da campanha</label>
+				<textarea v-model="corpo"></textarea>
+			</div>
+			<p style="color:red; font-size: 10px">Obs: O editor funciona com tags HTML</p>
+			<h3 class="ui disabled header">Selecionar contatos</h3>
+			<div class="field">
+					<div class="ui checkbox" name="todos">
+					  <input type="checkbox">
+					  <label>Selecionar todos</label>
+					</div>
+				</div>
+			<div class="grouped fields" v-for="contato in contatos.ativos">
+				<div class="field">
+					<div class="ui checkbox">
+					  <input type="checkbox" v-model="contatos.selecionado" :value="contato.cod">
+					  <label>{{contato.nome}}</label>
+					</div>
+				</div>
+			</div>
+			<div class="ui hidden divider"></div>
+			<button class="ui big primary button">Salvar</button>
+			<button class="ui big loading button" style="display: none;">Loading...</button>
+		</form>
+	</div>	
+</div>
+
+<script type="text/javascript" src="{PATH}/js/header.js"></script>
+<script type="text/javascript" src="{PATH}/js/cadastrar-campanha.js"></script>

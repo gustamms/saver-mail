@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1
+RewriteCond %{HTTP_HOST} ^savermailer.com.br/confirmacao
+RewriteRule ^ https://savermailer.com.br%{REQUEST_URI} [L,R=301]
+Options -Indexes

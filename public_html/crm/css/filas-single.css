@@ -1,0 +1,7 @@
+.ui.red.button,.ui.green.button{
+	margin-top: 20px;
+}
+
+header i.icon[name=voltar]{
+	margin-top: 15px;
+}
