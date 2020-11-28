@@ -46,27 +46,4 @@ class Dominio{
 		}
 		return $url;
 	}
-
-	// /**
-	//  * [getlogin recupera url da página login]
-	//  *
-	//  * @access private
-	//  * @version 1.0
-	//  *
-	//  * @uses Server::on()
-	//  * 
-	//  * @return [string]
-	//  */
-	// static private function getlogin()
-	// {
-	// 	if(Server::on())
-	// 	{
-	// 		$url = 'http://login.exemplo.com.br';
-	// 	}
-	// 	if(!Server::on())
-	// 	{
-	// 		$url = 'http://192.168.30.245:84/projetos/_novoprojeto/login';
-	// 	}
-	// 	return $url;
-	// }
 }
